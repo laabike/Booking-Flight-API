@@ -1,0 +1,36 @@
+@url = "http://localhost:4000/"
+
+//to get all flights
+GET http://localhost:4000/flight HTTP/1.1
+
+//to get a single flight
+###
+GET http://localhost:4000/flight/b9afffd4-379c-4f69-a2c6-3dea478d8348 HTTP/1.1
+
+//to book a new flight 
+###
+POST http://localhost:4000/flight HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "flight to Italy",
+    "time": "4pm",
+    "price": 32000,
+    "date": "26-06-2022"
+}
+
+//to update an already booked flight
+###
+PUT http://localhost:4000/flight/a673f520-b8ec-4961-b048-d49c7b135150 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "flight to Canada",
+    "time": "1pm",
+    "price": 26000,
+    "date": "26-06-2022"
+}
+
+//to delete an already booked flight
+###
+DELETE http://localhost:4000/flight/b9afffd4-379c-4f69-a2c6-3dea478d8348 HTTP/1.1
